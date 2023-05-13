@@ -1,0 +1,15 @@
+.. _treti:
+
+
+Treti jmeno
+===========
+
+Tady bude zase nejaky text.
+
+ * A budou k tomu taky dalsi detaily
+ * A dalsi detaily
+ 
+Ukazeme si, jak se co dela.
+
+A jeste taky by bylo moc pekne, kdyby k tomu byly nejake obrazky, ale na to je
+zatim jeste dost casu.

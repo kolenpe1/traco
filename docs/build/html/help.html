@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help &mdash; traco 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Working with SCA" href="sca.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            traco
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mtz.html">Working with MTZ files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xds.html">Working with HKL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shelx.html">Working with hkl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sca.html">Working with SCA</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Help</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">traco</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Help</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/help.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="help">
+<h1>Help<a class="headerlink" href="#help" title="Permalink to this heading"></a></h1>
+<div class="highlight-console notranslate" id="id1"><div class="highlight"><pre><span></span><span class="go">python3 traco.py --help</span>
+
+<span class="gp">#</span><span class="c1">###################################################</span>
+<span class="gp"># </span>Correction<span class="w"> </span><span class="k">for</span><span class="w"> </span>multi-lattice<span class="w"> </span>translocation<span class="w"> </span>defects
+<span class="gp">#</span><span class="c1">###################################################</span>
+
+<span class="go">usage: TRACO [-h] [-c CELL [CELL ...]] [--mtz_I MTZ_I] [--I_label I_LABEL] [--SIGI_label SIGI_LABEL] [--mtz_F MTZ_F] [--F_label F_LABEL]</span>
+<span class="go">          [--SIGF_label SIGF_LABEL] [--hkl HKL] [--HKL HKL] [--sca SCA] [--sca_ignore SCA_IGNORE] [--k1 K1] [--fc1 FC1 [FC1 ...]]</span>
+<span class="go">          [--k2 K2] [--fc2 FC2 [FC2 ...]] [--k3 K3] [--fc3 FC3 [FC3 ...]] [--k4 K4] [--fc4 FC4 [FC4 ...]] [--k5 K5]</span>
+<span class="go">          [--fc5 FC5 [FC5 ...]] [--force] [-o OUTPUT_FILE]</span>
+
+<span class="go">options:</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  -c CELL [CELL ...], --cell CELL [CELL ...]</span>
+<span class="go">                     unit cell parameters</span>
+<span class="go">  --mtz_I MTZ_I         input MTZ file with intensities</span>
+<span class="go">  --I_label I_LABEL     label for intensities</span>
+<span class="go">  --SIGI_label SIGI_LABEL</span>
+<span class="go">                     label for sigmas</span>
+<span class="go">  --mtz_F MTZ_F         input MTZ file with structure factors</span>
+<span class="go">  --F_label F_LABEL     label for structure factors</span>
+<span class="go">  --SIGF_label SIGF_LABEL</span>
+<span class="go">                        label for sigmas</span>
+<span class="go">  --hkl HKL             input file with SHELX-like structure factors</span>
+<span class="go">  --HKL HKL             XDS_ASCII.HKL input file from XDS</span>
+<span class="go">  --sca SCA             input SCA file with intensities</span>
+<span class="go"> --sca_ignore SCA_IGNORE</span>
+<span class="go">                        how many initial lines should be ignored (do not contain data)</span>
+<span class="go">  --k1 K1               fraction of the 1st translocation disorder</span>
+<span class="go">  --fc1 FC1 [FC1 ...]   fractional coordinates of the 1st translocation disorder</span>
+<span class="go">  --k2 K2               fraction of the 2nd translocation disorder</span>
+<span class="go">  --fc2 FC2 [FC2 ...]   fractional coordinates of the 2nd translocation disorder</span>
+<span class="go">  --k3 K3               fraction of the 3rd translocation disorder</span>
+<span class="go">  --fc3 FC3 [FC3 ...]   fractional coordinates of the 3rd translocation disorder</span>
+<span class="go">  --k4 K4               fraction of the 4th translocation disorder</span>
+<span class="go">  --fc4 FC4 [FC4 ...]   fractional coordinates of the 4th translocation disorder</span>
+<span class="go">  --k5 K5               fraction of the 5th translocation disorder</span>
+<span class="go">  --fc5 FC5 [FC5 ...]   fractional coordinates of the 5th translocation disorder</span>
+<span class="go">  --force, -f           forcing output file</span>
+<span class="go">  -o OUTPUT_FILE, --output_file OUTPUT_FILE</span>
+<span class="go">                        defines the output file</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sca.html" class="btn btn-neutral float-left" title="Working with SCA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Petr Kolenko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
