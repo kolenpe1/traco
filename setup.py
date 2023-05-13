@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README') as f:
     long_description = ''.join(f.readlines())
@@ -12,7 +12,7 @@ setup(
     author_email='kolenpe1@cvut.cz',
     license='GNU LESSER GENERAL PUBLIC LICENSE Version 3',
     url='https://github.com/kolenpe1/traco',
-    py_modules=['traco'],
+    packages=find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
         'License :: GNU lGPL v3',
