@@ -10,16 +10,18 @@ setup(
     long_description=long_description,
     author="Petr Kolenko",
     author_email='kolenpe1@cvut.cz',
-    license='GNU LESSER GENERAL PUBLIC LICENSE Version 3',
     url='https://github.com/kolenpe1/traco',
     packages=find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: GNU lGPL v3',
-        'Operating System :: Linux',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Topic :: Software Development',
     ],
+    entry_points={
+        'console_scripts': [
+            'traco = traco.source:main',
+        ],
+    },
     zip_safe=False,
 )
