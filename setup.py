@@ -5,7 +5,7 @@ with open('README') as f:
 
 setup(
     name='traco',
-    version='0.1',
+    version='0.2',
     description="Correction of translocation defects in crystals",
     long_description=long_description,
     author="Petr Kolenko",
