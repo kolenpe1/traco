@@ -365,8 +365,25 @@ def read_SCA_file():
 # WORKING WITH MTZ-I DATA 
 def mtz_I():
     global cell
+    # testing for modules
+    try:
+        import gemmi
+    except ModuleNotFoundError:
+        print("The module GEMMI is not installed.\n") 
+        quit()
+    else:
+        pass
+    try:
+        import numpy
+    except ModuleNotFoundError:
+        print("The module Numpy is not installed.\n") 
+        quit()
+    else:
+        pass
+    # import of modules
     import gemmi
     import numpy
+    import math
     mtz = gemmi.read_mtz_file(args.mtz_I)
     # Adds empty column to the file
     mtz.add_column('I_new', 'J')
@@ -395,6 +412,22 @@ def mtz_I():
 # WORKING WITH MTZ-F DATA 
 def mtz_F():
     global cell
+    # testing for modules
+    try:
+        import gemmi
+    except ModuleNotFoundError:
+        print("The module GEMMI is not installed.\n") 
+        quit()
+    else:
+        pass
+    try:
+        import numpy
+    except ModuleNotFoundError:
+        print("The module Numpy is not installed.\n") 
+        quit()
+    else:
+        pass
+    # import of modules
     import gemmi
     import numpy
     import math
